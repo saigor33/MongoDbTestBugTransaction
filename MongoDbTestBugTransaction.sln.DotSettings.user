@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002FUsers_002Fi_005Fskladchikov_002FMyFolder_002FProjects_002FMongoDbTestBugTransaction_002FMongoDbTestBugTransaction_002FMongoDB_002FDnsClient_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002FUsers_002Fi_005Fskladchikov_002FMyFolder_002FProjects_002FMongoDbTestBugTransaction_002FMongoDbTestBugTransaction_002FMongoDB_002FMongoDB_002EBson_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002FUsers_002Fi_005Fskladchikov_002FMyFolder_002FProjects_002FMongoDbTestBugTransaction_002FMongoDbTestBugTransaction_002FMongoDB_002FMongoDB_002EDriver_002ECore_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002FUsers_002Fi_005Fskladchikov_002FMyFolder_002FProjects_002FMongoDbTestBugTransaction_002FMongoDbTestBugTransaction_002FMongoDB_002FSharpCompress_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=_002FUsers_002Fi_005Fskladchikov_002FMyFolder_002FProjects_002FMongoDbTestBugTransaction_002FMongoDbTestBugTransaction_002FMongoDB_002FSystem_002EBuffers_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
+  &lt;Assembly Path="/Users/i_skladchikov/MyFolder/Projects/MongoDbTestBugTransaction/MongoDbTestBugTransaction/MongoDB/MongoDB.Driver.Core.dll" /&gt;
+&lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>
