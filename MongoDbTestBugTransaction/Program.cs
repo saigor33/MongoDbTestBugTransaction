@@ -79,10 +79,15 @@ static class InsertInTwoCollectionWithoutWaitingFinishAllQueriesExample
             session.StartTransaction();
 
             Task insertClanTask = InsertClanDocument(session, db);
+            // await Task.Delay(1);
             Task insertClansPlayerEntryTask = InsertClansPlayerEntryDocument(session, db);
 
             await insertClanTask;
             await insertClansPlayerEntryTask;
+            // await InsertClanDocument(session, db);
+            // await InsertClansPlayerEntryDocument(session, db);
+
+            await Task.WhenAll(insertClanTask, insertClansPlayerEntryTask);
 
             await session.CommitTransactionAsync();
         }
@@ -102,8 +107,8 @@ static class InsertInTwoCollectionWithoutWaitingFinishAllQueriesExample
         try
         {
             IMongoCollection<BsonDocument> collection = db.GetCollection<BsonDocument>(ClanCollectionName);
-            // await collection.InsertOneAsync(clientSessionHandle, clanBsonDocument);
-             collection.InsertOne(clientSessionHandle, clanBsonDocument);
+            await collection.InsertOneAsync(clientSessionHandle, clanBsonDocument);
+            // collection.InsertOne(clientSessionHandle, clanBsonDocument);
         }
         catch (Exception e)
         {
@@ -122,8 +127,8 @@ static class InsertInTwoCollectionWithoutWaitingFinishAllQueriesExample
         try
         {
             IMongoCollection<BsonDocument> collection = db.GetCollection<BsonDocument>(ClansPlayersCollectionName);
-            //await collection.InsertOneAsync(clientSessionHandle, clansPlayerEntryDocument);
             collection.InsertOne(clientSessionHandle, clansPlayerEntryDocument);
+            // return collection.InsertOneAsync(clientSessionHandle, clansPlayerEntryDocument);
         }
         catch (Exception e)
         {

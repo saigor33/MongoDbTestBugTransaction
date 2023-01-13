@@ -11,6 +11,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1f14ceb856c746e895b8176fe6cac57b28caa0/8a/a6983f96/YieldAwaitable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1f14ceb856c746e895b8176fe6cac57b28caa0/b7/dc4f3094/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MongoDbTestBugTransaction/obj/Debug/net46/MongoDbTestBugTransaction.GlobalUsings.g.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -57,7 +59,7 @@
       <updated>1673597822406</updated>
       <workItem from="1673597825825" duration="1796000" />
       <workItem from="1673599639412" duration="108000" />
-      <workItem from="1673599854904" duration="4597000" />
+      <workItem from="1673599854904" duration="8113000" />
     </task>
     <servers />
   </component>
