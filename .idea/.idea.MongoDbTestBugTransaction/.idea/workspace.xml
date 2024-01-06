@@ -18,17 +18,27 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
   <component name="ProjectId" id="2KGPCxTk06gNvI8I1nXNAsoR62L" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/i_skladchikov/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
+      "/Users/i_skladchikov/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache",
+      "/Users/i_skladchikov/.local/share/Symbols/src"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="MongoDbTestBugTransaction" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -59,7 +69,14 @@
       <updated>1673597822406</updated>
       <workItem from="1673597825825" duration="1796000" />
       <workItem from="1673599639412" duration="108000" />
-      <workItem from="1673599854904" duration="8113000" />
+      <workItem from="1673599854904" duration="9767000" />
+      <workItem from="1673614995463" duration="1181000" />
+      <workItem from="1673617383012" duration="4845000" />
+      <workItem from="1673850832900" duration="1699000" />
+      <workItem from="1674135535998" duration="1722000" />
+      <workItem from="1674570599448" duration="75000" />
+      <workItem from="1675759409563" duration="7937000" />
+      <workItem from="1704538961257" duration="67000" />
     </task>
     <servers />
   </component>

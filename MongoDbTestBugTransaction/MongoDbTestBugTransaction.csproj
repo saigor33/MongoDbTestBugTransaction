@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
         <Nullable>enable</Nullable>
-        <LangVersion>8</LangVersion>
-        <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
+        <LangVersion>9</LangVersion>
+        <TargetFrameworks>net48;netstandard2.0</TargetFrameworks>
+        <OutputType>Exe</OutputType>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,10 +14,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="MongoDB.Bson" Version="2.9.2" />
-      <PackageReference Include="MongoDB.Driver" Version="2.9.2" />
-      <PackageReference Include="MongoDB.Driver.Core" Version="2.9.2" />
-      <PackageReference Include="MongoDB.Driver.GridFS" Version="2.9.2" />
+      <PackageReference Include="MongoDB.Bson" Version="2.18.0" />
+      <PackageReference Include="MongoDB.Driver" Version="2.18.0" />
+      <PackageReference Include="MongoDB.Driver.Core" Version="2.18.0" />
+      <PackageReference Include="MongoDB.Driver.GridFS" Version="2.18.0" />
     </ItemGroup>
 
 </Project>

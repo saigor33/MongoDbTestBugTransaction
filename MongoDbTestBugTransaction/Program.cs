@@ -1,8 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -13,8 +10,6 @@ public static class Programm
     {
         Console.WriteLine("Start");
 
-        // string internalHost = $"127.0.0.1:5000";
-
         bool isSuccess = false;
         IMongoDatabase db = null;
         MongoClient mongoClient = null;
@@ -23,7 +18,7 @@ public static class Programm
             const string dataBaseHost = "mongodb://localhost:27017";
             const string dataBaseStorage = "bowl";
 
-            MongoClientSettings clientSettings = MongoClientSettings.FromConnectionString(dataBaseHost);
+            MongoClientSettings clientSettings = MongoClientSettings.FromConnectionString($"{dataBaseHost}");
             clientSettings.ConnectTimeout = TimeSpan.FromSeconds(2d);
             clientSettings.ServerSelectionTimeout = TimeSpan.FromSeconds(30d);
             mongoClient = new MongoClient(clientSettings);
@@ -78,16 +73,21 @@ static class InsertInTwoCollectionWithoutWaitingFinishAllQueriesExample
 
             session.StartTransaction();
 
-            Task insertClanTask = InsertClanDocument(session, db);
-            // await Task.Delay(1);
-            Task insertClansPlayerEntryTask = InsertClansPlayerEntryDocument(session, db);
+            const bool IsWithoutErrorMode = false;
+            if (IsWithoutErrorMode)
+            {
+                await InsertClanDocument(session, db);
+                await InsertClansPlayerEntryDocument(session, db);
+            }
+            else
+            {
+                Task insertClanTask = InsertClanDocument(session, db);
+                // await Task.Delay(10); // Can add delay. It is will correct job
+                Task insertClansPlayerEntryTask = InsertClansPlayerEntryDocument(session, db);
 
-            await insertClanTask;
-            await insertClansPlayerEntryTask;
-            // await InsertClanDocument(session, db);
-            // await InsertClansPlayerEntryDocument(session, db);
-
-            await Task.WhenAll(insertClanTask, insertClansPlayerEntryTask);
+                await insertClanTask;
+                await insertClansPlayerEntryTask;
+            }
 
             await session.CommitTransactionAsync();
         }
@@ -108,7 +108,6 @@ static class InsertInTwoCollectionWithoutWaitingFinishAllQueriesExample
         {
             IMongoCollection<BsonDocument> collection = db.GetCollection<BsonDocument>(ClanCollectionName);
             await collection.InsertOneAsync(clientSessionHandle, clanBsonDocument);
-            // collection.InsertOne(clientSessionHandle, clanBsonDocument);
         }
         catch (Exception e)
         {
@@ -127,8 +126,7 @@ static class InsertInTwoCollectionWithoutWaitingFinishAllQueriesExample
         try
         {
             IMongoCollection<BsonDocument> collection = db.GetCollection<BsonDocument>(ClansPlayersCollectionName);
-            collection.InsertOne(clientSessionHandle, clansPlayerEntryDocument);
-            // return collection.InsertOneAsync(clientSessionHandle, clansPlayerEntryDocument);
+            await collection.InsertOneAsync(clientSessionHandle, clansPlayerEntryDocument);
         }
         catch (Exception e)
         {
